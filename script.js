@@ -97,9 +97,8 @@ function findCellByIndex(cellIndex) {
 function handleMoveAI() {
   let cellIndex;
   do {
-    cellIndex = getRandomIntInclusive(0, 8);
-  } while (gameTable[cellIndex] !== "");
-
+    cellIndex = getRandomIntInclusive(0, 8); //index 'O' random
+  } while (gameTable[cellIndex] !== ""); 
   gameTable[cellIndex] = ai; 
   let cell = findCellByIndex(cellIndex);
   cell.innerHTML = ai; // 'O'
